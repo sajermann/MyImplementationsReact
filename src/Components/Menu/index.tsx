@@ -2,11 +2,13 @@ import { List } from 'phosphor-react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { generateGuid } from '@sajermann/utils/Random';
-import { OptionButton } from '../../components/OptionButton';
-import { Drawer } from '../../components/Drawer';
-import { useDarkMode } from '../../Hooks/DarkMode';
+
+import { useDarkMode } from '../../Hooks/UseDarkMode';
+import { Drawer } from '../Drawer';
+import { OptionButton } from '../OptionButton';
+import { OPTIONS_MENU } from '../../Constants/OptionsMenu';
+
 import styles from './styles.module.css';
-import optionsMenu from '../../Utils/OptionsMenu';
 
 export default function Menu() {
 	const { darkMode } = useDarkMode();
@@ -40,7 +42,7 @@ export default function Menu() {
 						<div className={styles.title}>Menu</div>
 					</nav>
 					<div className={styles.main}>
-						{optionsMenu.map(menu => (
+						{OPTIONS_MENU.map(menu => (
 							<OptionButton
 								key={generateGuid()}
 								className={`${styles.menu} ${
