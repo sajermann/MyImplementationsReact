@@ -17,8 +17,10 @@ export function Header() {
 						{translate('MY_IMPLEMENTATIONS_IN_REACT')}
 					</h1>
 				</Link>
-				<ToggleDarkMode />
-				<SelectLanguage />
+				<div className="flex items-center justify-center gap-2">
+					<ToggleDarkMode />
+					<SelectLanguage />
+				</div>
 			</div>
 		</nav>
 	);

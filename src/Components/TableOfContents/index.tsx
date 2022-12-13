@@ -66,9 +66,11 @@ export default function TableOfContents() {
 				{optionsMenu.map(item => (
 					<li
 						key={`#${item.anchor}`}
-						className={`${styles[item.type]} ${item.active && styles.active}`}
+						className={`${styles[item.type]} ${item.active && styles.active} `}
 					>
-						<a href={`#${item.anchor}`}>{item.title}</a>
+						<a className="dark:text-white" href={`#${item.anchor}`}>
+							{item.title}
+						</a>
 					</li>
 				))}
 			</ul>

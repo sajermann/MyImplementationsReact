@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { DarkModeProvider } from '../../Hooks/UseDarkMode';
 import { TestProvider } from '../../Hooks/UseTest';
 import { Header } from '../Header';
+import '../../Config/i18n';
 
 export function InjectorProviders({ children }: { children: React.ReactNode }) {
 	return (
